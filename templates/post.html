@@ -1,0 +1,16 @@
+{{ define "post"}}
+
+{{ template "Header"}}
+
+<main role="main" class="inner cover">  
+{{ range . }}
+    <div class="alert alert-danger">
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Anons }}</p>
+        <a href="/show/{{ .Id }}" class="btn btn-danger">Read more</a>
+    </div>
+    </main>
+{{ end }}
+{{ template "Footer"}}
+
+{{ end }}
